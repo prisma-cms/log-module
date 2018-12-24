@@ -1,6 +1,11 @@
 
+1.1.4
+===============================
+- getApiSchema() now get prisma schema from current module dir only
+
 1.1.3
 ===============================
+- Move tests
 - Added Query resolvers
 
 1.1.2
