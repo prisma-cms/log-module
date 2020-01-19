@@ -1,3 +1,16 @@
+"""
+@prisma-cms/log-module
+"""
+
+type Log {
+  id: ID! @id @unique
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+  level: LogLevel! @default(value: Info)
+  objectType: ID
+  message: String!
+  stack: String
+}
 
 enum LogLevel {
   Info
@@ -5,12 +18,4 @@ enum LogLevel {
   Warning
   Error
   Fatal
-}
-
-type Log {
-  id: ID! @unique
-  level: LogLevel! @default(value: Info)
-  objectType: ID
-  message: String!
-  stack: String
 }
